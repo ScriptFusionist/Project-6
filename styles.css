@@ -1,0 +1,259 @@
+body {
+    background: linear-gradient(45deg, #d0e7ff, #a6cfe2, #8bbde0, #6699cc, #4a8abf);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .card:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 12px 30px rgba(70, 130, 180, 0.5);
+  }
+  
+  .card:hover .card-body {
+    background: radial-gradient(circle, rgba(135, 206, 235, 0.2), rgba(255, 255, 255, 1));
+    transition: background 0.5s ease;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.1) rotate(2deg);
+    transition: transform 0.6s ease;
+  }
+  
+  .card-img-top {
+    border-bottom: 5px solid #4682b4;
+    transition: transform 0.2s ease;
+    border-radius: 15px;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #6a6a6a;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #4682b4;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(70, 130, 180, 0.7);
+    font-size: calc(1.2rem + 0.5vw);
+  }
+  
+  .btn-custom {
+    background: linear-gradient(45deg, #4682b4, #5f9ea0);
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: background 0.5s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-custom::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  
+  .btn-custom:hover::before {
+    top: -100%;
+    left: 150%;
+    transition: all 0.6s ease;
+  }
+  
+  .btn-custom:hover {
+    background: linear-gradient(45deg, #5f9ea0, #4682b4);
+    transform: scale(1.1);
+  }
+  
+  .btn-custom:active {
+    animation: bounce 0.3s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .nav-tabs {
+    border-bottom: 2px solid #4682b4;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .nav-tabs .nav-item .nav-link {
+    color: #4682b4;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-tabs .nav-item .nav-link:hover {
+    color: #5f9ea0;
+  }
+  
+  .nav-tabs .nav-item .nav-link.active {
+    color: #5f9ea0;
+    border-bottom-color: #4682b4;
+  }
+  
+  .tab-content {
+    padding-top: 10px;
+  }
+  
+  .tab-pane {
+    color: #333;
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.4s ease;
+  }
+  
+  .tab-pane.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Animasi pada item navbar */
+  .nav-tabs .nav-item {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInNavbar 0.5s forwards ease-in-out;
+  }
+  
+  .nav-tabs .nav-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .nav-tabs .nav-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .nav-tabs .nav-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInNavbar {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animasi khusus untuk tab "Profil" */
+  #profile {
+    animation: slideInFromLeft 0.5s ease-in-out;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animasi khusus untuk tab "Kemampuan" */
+  #abilities {
+    animation: fadeInZoom 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeInZoom {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Animasi satu per satu untuk Fakta Menarik */
+  #facts ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInFacts 0.4s forwards ease-in-out;
+  }
+  
+  #facts ul li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  #facts ul li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  #facts ul li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInFacts {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

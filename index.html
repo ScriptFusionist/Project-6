@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartu Profil Nao Tomori</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="card" id="naoCard">
+    <img src="nao.png" class="card-img-top" id="naoImage" alt="Gambar Nao Tomori">
+    <div class="card-body">
+      <p class="quote">"Aku tidak akan menyerah, karena itulah caraku hidup."</p>
+      <h5 class="card-title">Nao Tomori</h5>
+      <ul class="nav nav-tabs" id="naoTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Profil</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="career-tab" data-bs-toggle="tab" data-bs-target="#career" type="button" role="tab" aria-controls="career" aria-selected="false">Karier</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="facts-tab" data-bs-toggle="tab" data-bs-target="#facts" type="button" role="tab" aria-controls="facts" aria-selected="false">Fakta Menarik</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="naoTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <p>Nao Tomori adalah ketua OSIS dari Hoshinoumi Academy yang memiliki kemampuan untuk membuat dirinya tidak terlihat oleh satu orang yang dia pilih. Dia dikenal tegas, cerdas, dan memiliki kepedulian yang kuat terhadap teman-temannya.</p>
+        </div>
+        <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
+          <p>Nao memiliki kemampuan unik untuk menghilang dari pandangan satu orang yang dia pilih, membuatnya berguna dalam situasi yang memerlukan penyelidikan tanpa terdeteksi.</p>
+        </div>
+        <div class="tab-pane fade" id="facts" role="tabpanel" aria-labelledby="facts-tab">
+          <ul>
+            <li>Warna favoritnya adalah biru muda.</li>
+            <li>Nao sangat menyukai musik dan sering merekam penampilan band lokal.</li>
+            <li>Dia adalah seorang yang keras kepala, namun peduli pada orang-orang di sekitarnya.</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="btn btn-custom" id="followBtn">Follow</a>
+      <a href="https://character.ai/chat/naoLink" class="btn btn-custom" id="messageBtn">Message</a>
+    </div>
+  </div>
+  
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS for interactivity -->
+  <script src="script.js"></script>
+</body>
+</html>
